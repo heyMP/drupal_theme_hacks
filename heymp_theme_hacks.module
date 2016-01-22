@@ -32,3 +32,22 @@ function heymp_theme_hacks_preprocess_entity(&$variables, $hook) {
 //   $variables['svg_sprite_path'] = $base_url . '/' . $theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg';
 //   $variables['svg_sprite'] = file_get_contents($theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg');
 // }
+
+/**
+ * Helper function to remove unique multidimensional arrays
+ * @param  [type] $array [description]
+ * @return [type]        [description]
+ */
+function _heymp_theme_hacks_array_unique_recursive($array) {
+  $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
+
+  foreach ($result as $key => $value)
+  {
+    if ( is_array($value) )
+    {
+      $result[$key] = super_unique($value);
+    }
+  }
+
+  return $result;
+}
