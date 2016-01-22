@@ -35,8 +35,6 @@ function heymp_theme_hacks_preprocess_entity(&$variables, $hook) {
 
 /**
  * Helper function to remove unique multidimensional arrays
- * @param  [type] $array [description]
- * @return [type]        [description]
  */
 function _heymp_theme_hacks_array_unique_recursive($array) {
   $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
