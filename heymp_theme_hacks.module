@@ -26,13 +26,12 @@ function heymp_theme_hacks_preprocess_entity(&$variables, $hook) {
  *   <use xlink:href="<?php print $svg_sprite_path; ?>#email"></use>
  * </svg>
  */
-function heymp_theme_hacks_preprocess(&$variables) {
-  global $base_url;
-  $theme_path = path_to_theme();
-  $variables['theme_path'] = $base_url . '/' . $theme_path;
-  // $variables['svg_sprite_path'] = $base_url . '/' . $theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg';
-  // $variables['svg_sprite'] = file_get_contents($theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg');
-}
+/* function heymp_theme_hacks_preprocess(&$variables) { */
+/*   $theme_path = path_to_theme(); */
+/*   $variables['theme_path'] = $base_url . '/' . $theme_path; */
+/*   // $variables['svg_sprite_path'] = $base_url . '/' . $theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg'; */
+/*   // $variables['svg_sprite'] = file_get_contents($theme_path . '/frontend-dev/svg/dist/symbol/svg/sprite.symbol.svg'); */
+/* } */
 
 /**
  * Helper function to remove unique multidimensional arrays
